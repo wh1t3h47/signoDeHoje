@@ -24,7 +24,7 @@ const verifica_data_range = (data, data_inicio, data_fim, tipo_comparacao) => {
  * const nome_signo = retorna_signo(data_app);
  * console.log(`O signo de hoje é: ${nome_signo}`);
  * @param {Date} data
- * @return {string | ''} retorna um signo
+ * @return {string | ''} retorna um signo ou uma string vazia caso haja erro
  * @throws {Error}
  **/
 const retorna_signo = (data) => {
