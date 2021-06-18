@@ -21,6 +21,14 @@ const and = 1;
 /** @type {Record<'and'|'or', number>} */
 const operacao = { and, or };
 
+/**
+ * @param {Date} data
+ * @param {Date} data_inicio
+ * @param {Date} data_fim
+ * @param {operacao} tipo_comparacao
+ * @return {Boolean} true caso a data se encaixe dentro do intervalo
+ * @throws {Error}
+ **/
 const verifica_data_range = (data, data_inicio, data_fim, tipo_comparacao) => {
   if (tipo_comparacao === operacao.and) {
     return (data >= data_inicio && data <= data_fim);
@@ -36,8 +44,10 @@ const verifica_data_range = (data, data_inicio, data_fim, tipo_comparacao) => {
  * const data_app = new Date();
  * const nome_signo = retorna_signo(data_app);
  * console.log(`O signo de hoje é: ${nome_signo}`);
- * @param {Date|string} data
- * */
+ * @param {Date} data
+ * @return {string | ''} retorna um signo
+ * @throws {Error}
+ **/
 const retorna_signo = (data) => {
   const signos = colecao_signos;
   const ano = data.getFullYear();
