@@ -1,3 +1,4 @@
+/** @type {{ Nome: string, DataInicio: string | Date, DataFim: string | Date }} */
 const colecao_signos = [
   { Nome: 'Aquário', DataInicio: '01-20', DataFim: '02-18' },
   { Nome: 'Peixes', DataInicio: '02-19', DataFim: '03-20' },
@@ -17,14 +18,16 @@ const colecao_signos = [
 const or = 0;
 /** enum */
 const and = 1;
+/** @type {Record<'and'|'or', number>} */
+const operacao = { and, or };
 
 const verifica_data_range = (data, data_inicio, data_fim, tipo_comparacao) => {
-  if (tipo_comparacao === and) {
+  if (tipo_comparacao === operacao.and) {
     return (data >= data_inicio && data <= data_fim);
-  }
-  if (tipo_comparacao === or) {
+  } // else
+  if (tipo_comparacao === operacao.or) {
     return (data >= data_inicio || data <= data_fim);
-  }
+  } // else
   throw new Error('Comparação inválida');
 };
 
@@ -43,7 +46,7 @@ const retorna_signo = (data) => {
     const data_inicio_signo = new Date(`${ano}-${signo.DataInicio} 00:00:00`);
     const data_fim_signo = new Date(`${ano}-${signo.DataFim} 23:59:59`);
 
-    const tipo_comparacao = signo.DataInicio === '12-22' ? or : and;
+    const tipo_comparacao = signo.DataInicio === '12-22' ? operacao.or : operacao.and;
 
     if (verifica_data_range(data, data_inicio_signo, data_fim_signo, tipo_comparacao)) {
       return signo.Nome;
@@ -52,4 +55,4 @@ const retorna_signo = (data) => {
   return '';
 };
 
-export default retorna_signo;
+module.exports =  {  default: retorna_signo };
