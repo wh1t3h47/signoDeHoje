@@ -8,7 +8,9 @@
   "license": "NONE",
   "private": false,
   "devDependencies": {
-    "eslint": "^7.28.0"
+    "@types/jest": "^26.0.23",
+    "eslint": "^7.28.0",
+    "jest": "^27.0.4"
   },
   "scripts": {
     "lint": "./lint.sh"
