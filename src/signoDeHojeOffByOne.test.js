@@ -1,4 +1,5 @@
 const retorna_signo = require("./signoDeHoje").default;
+const {DataInicio} = require("./definitions")
 
 // Sou meio cético, mas vai lá, pelo esporte mesmo...
 /** @typedef {'Aquário'|'Peixes'|'Áries'|'Touro'|'Gêmeos'|'Câncer'|'Leão'|'Virgem'|'Libra'|'Escorpião'|'Sagitário'|'Capricórnio'} signoComComplecaoVsCode */
@@ -59,6 +60,6 @@ testarSigno('testar primeiro dia de Sagitário)', new Date('11-22-2000'), "Sagit
 
 testarSigno('testar último dia de Sagitário)', new Date('12-21-2000'), "Sagitário")
 
-testarSigno('testar primeiro dia de Capricórnio)', new Date('12-22-2000'), "Capricórnio")
+testarSigno('testar primeiro dia de Capricórnio)', new Date(`${DataInicio}-2000`), "Capricórnio")
 
 testarSigno('testar último dia de Capricórnio)', new Date('01-20-2000'), "Capricórnio")
