@@ -12,7 +12,7 @@ const Assertions = require("./assertions").default;
 
 const verifica_data_range = (data, data_inicio, data_fim, tipo_comparacao) => {
   Assertions.checkType({ tipo_comparacao }, 'object')
-  Assertions.checkInstance({ tipo_comparacao }, { operacao })
+  // Assertions.checkInstance({ tipo_comparacao }, { operacao })
   Assertions.checkInstance({ data, data_inicio, data_fim }, Date)
 
   // assert((tipo_comparacao instanceof operacao), "Operação precisa ser do tipo operacao, disponível em definitions.js");
@@ -39,9 +39,12 @@ const verifica_data_range = (data, data_inicio, data_fim, tipo_comparacao) => {
 
 const retorna_signo = (data) => {
   Assertions.checkInstance({ data }, Date)
+  if (Number.isNaN(data)) {
+    throw new Error("A data não pode ser convertida para signo, pois é inválida.");
+  }
 
   const signos = colecao_signos;
-  const ano = (new Date()).getFullYear();
+  const ano = data.getFullYear();
   let signoNome = '';
 
   signos.some((signo) => {

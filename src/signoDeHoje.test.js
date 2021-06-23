@@ -2,72 +2,84 @@ const retorna_signo = require("./signoDeHoje").default;
 const { colecao_signos } = require("./definitions");
 
 // Sou meio cético, mas vai lá, pelo esporte mesmo...
-// 'Aquário'|'Peixes'|'Áries'|'Touro'|'Gêmeos'|'Câncer'|'Leão'|'Virgem'|'Libra'|'Escorpião'|'Sagitário'|'Capricórnio'
+/** @typedef {'Aquário'|'Peixes'|'Áries'|'Touro'|'Gêmeos'|'Câncer'|'Leão'|'Virgem'|'Libra'|'Escorpião'|'Sagitário'|'Capricórnio'} signoComComplecaoVsCode */
 
-/** @type {'Aquário'|'Peixes'|'Áries'|'Touro'|'Gêmeos'|'Câncer'|'Leão'|'Virgem'|'Libra'|'Escorpião'|'Sagitário'|'Capricórnio'} */
-let signoComComplecaoVsCode = "Touro"
 test('Testar pessoa de Touro (o desenvolvedor)', () => {
-    expect(retorna_signo(new Date('12-05-2000'))).toMatch(signoComComplecaoVsCode)
+    /** @type {signoComComplecaoVsCode} */
+    const signo = "Touro"
+    expect(retorna_signo(new Date('05-12-2000'))).toMatch(signo)
 });
 
 
-signoComComplecaoVsCode = "Escorpião"
 test('Testar pessoa de Escorpião', () => {
-    expect(retorna_signo(new Date('24-10-1997'))).toMatch(signoComComplecaoVsCode)
+    /** @type {signoComComplecaoVsCode} */
+    const signo = "Escorpião"
+    expect(retorna_signo(new Date('10-24-1997'))).toMatch(signo)
 })
 
-signoComComplecaoVsCode = "Virgem"
 test('Testar pessoa virgem', () => {
-    expect(retorna_signo(new Date('23-08'))).toMatch(signoComComplecaoVsCode)
+    /** @type {signoComComplecaoVsCode} */
+    const signo = "Virgem"
+    expect(retorna_signo(new Date('08-23-2005'))).toMatch(signo)
 })
 
-signoComComplecaoVsCode = "Virgem"
 test('Testar pessoa virgem', () => {
-    expect(retorna_signo(new Date('22-09'))).toMatch(signoComComplecaoVsCode)
+    /** @type {signoComComplecaoVsCode} */
+    const signo = "Virgem"
+    expect(retorna_signo(new Date('09-22-2005'))).toMatch(signo)
 })
 
-signoComComplecaoVsCode = "Aquário"
 test('Testar pessoa aquário', () => {
-    expect(retorna_signo(new Date('23-01'))).toMatch(signoComComplecaoVsCode)
+    /** @type {signoComComplecaoVsCode} */
+    const signo = "Aquário"
+    expect(retorna_signo(new Date('01-23-2005'))).toMatch(signo)
 })
 
-signoComComplecaoVsCode = "Peixes"
 test('Testar pessoa peixe', () => {
-    expect(retorna_signo(new Date('21-02'))).toMatch(signoComComplecaoVsCode)
+    /** @type {signoComComplecaoVsCode} */
+    const signo = "Peixes"
+    expect(retorna_signo(new Date('02-21-2005'))).toMatch(signo)
 })
 
-signoComComplecaoVsCode = "Áries"
 test('Testar pessoa aries', () => {
-    expect(retorna_signo(new Date('19-04'))).toMatch(signoComComplecaoVsCode)
+    /** @type {signoComComplecaoVsCode} */
+    const signo = "Áries"
+    expect(retorna_signo(new Date('04-19-2005'))).toMatch(signo)
 })
 
-signoComComplecaoVsCode = "Gêmeos"
 test('Testar pessoas gemeas', () => {
-    expect(retorna_signo(new Date('25-05'))).toMatch(signoComComplecaoVsCode)
+    /** @type {signoComComplecaoVsCode} */
+    const signo = "Gêmeos"
+    expect(retorna_signo(new Date('05-25-2005'))).toMatch(signo)
 })
 
-signoComComplecaoVsCode = "Câncer"
 test('Testar pessoas de cancer', () => {
-    expect(retorna_signo(new Date('24-06'))).toMatch(signoComComplecaoVsCode)
+    /** @type {signoComComplecaoVsCode} */
+    const signo = "Câncer"
+    expect(retorna_signo(new Date('06-24-2005'))).toMatch(signo)
 })
 
-signoComComplecaoVsCode = "Leão"
 test('testar leão selvagem', () => {
-    expect(retorna_signo(new Date('29-07'))).toMatch(signoComComplecaoVsCode)
+    /** @type {signoComComplecaoVsCode} */
+    const signo = "Leão"
+    expect(retorna_signo(new Date('07-29-2005'))).toMatch(signo)
 })
 
-signoComComplecaoVsCode = "Libra"
 test('testar moeda libra', () => {
-    expect(retorna_signo(new Date('22-10'))).toMatch(signoComComplecaoVsCode)
+    /** @type {signoComComplecaoVsCode} */
+    const signo = "Libra"
+    expect(retorna_signo(new Date('10-22-2005'))).toMatch(signo)
 })
 
-signoComComplecaoVsCode = "Capricórnio"
 test('testar pessoa Capricornoano', () => {
-    expect(retorna_signo(new Date('20-01'))).toMatch(signoComComplecaoVsCode)
+    /** @type {signoComComplecaoVsCode} */
+    const signo = "Capricórnio"
+    expect(retorna_signo(new Date('01-20-2005'))).toMatch(signo)
 })
 
-signoComComplecaoVsCode = "Sagitário"
 test('testar pessoa sagiotário', () => {
-    expect(retorna_signo(new Date('18-12'))).toMatch(signoComComplecaoVsCode)
+    /** @type {signoComComplecaoVsCode} */
+    const signo = "Sagitário"
+    expect(retorna_signo(new Date('12-18-2005'))).toMatch(signo)
 })
 

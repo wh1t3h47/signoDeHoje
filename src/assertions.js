@@ -29,13 +29,13 @@ const Assertions = {
      * o nome da variável para mostrar uma mensagem de erro amigável
      * @param {'bigint' | 'boolean' | 'function' | 'number' | 'object' | 'string' | 'undefined'} expectedType 
      **/
-    checkType: (unknownTypesObj, expectedType) => {
+    checkType: (variablesToCompare, expectedType) => {
       /** @type {Array<unknown>} */
-      if (typeof unknownTypesObj !== 'object') {
-        throw new Error('unknownTypesObj tem que ser um objeto')
+      if (typeof variablesToCompare !== 'object') {
+        throw new Error('variablesToCompare tem que ser um objeto')
       }
 
-      Object.entries(variablesToCompare).forEach((varKey, variableToCompare) => {
+      Object.entries(variablesToCompare).forEach(([varKey, variableToCompare]) => {
         const actualType = (typeof variableToCompare);
         Assertions.assert(( actualType !== expectedType),
           `${varKey} precisa ser do tipo ${expectedType}, mas o tipo recebido é ${actualType}`)
@@ -84,7 +84,7 @@ const Assertions = {
         }
       }
 
-      Object.entries(objectsToCompare).forEach((varKey, objectToCompare) => {
+      Object.entries(objectsToCompare).forEach(([varKey, objectToCompare]) => {
         Assertions.assert((objectToCompare instanceof baseClass),
           `${varKey} precisa ser instância da classe ${expectedClassName || '[SEM NOME]'}`)
       })
