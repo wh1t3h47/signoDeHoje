@@ -1,6 +1,6 @@
 {
-  "name": "signoDeHoje",
-  "version": "1.0.0",
+  "name": "data-para-signo",
+  "version": "1.0.1",
   "description": "Projeto do site \"DevMedia\" para criar um programa através do JavaScript que lesse a data atual do sistema para imprimir o signo da pessoa nascida nesse dia através do uso de funções e manipulação de data. ",
   "main": "signoDeHoje.js",
   "repository": "https://github.com/wh1t3h47/signoDeHoje",
@@ -10,9 +10,12 @@
   "devDependencies": {
     "@types/jest": "^26.0.23",
     "eslint": "^7.28.0",
-    "jest": "^27.0.4"
+    "jest": "^27.0.4",
+    "np": "^7.5.0"
   },
   "scripts": {
-    "lint": "./lint.sh"
+    "lint": "./lint.sh",
+    "test": "jest",
+    "np:publish": "np"
   }
 }

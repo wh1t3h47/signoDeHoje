@@ -1,0 +1,51 @@
+.dccache
+# OS generated files
+DS_Store
+.DS_Store
+.DS_Store?
+._*
+.*.sw[op]
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editors and IDEs
+.idea/
+.vscode/
+
+# Dependencies
+node_modules/
+
+# dotenv environment variables file
+.env
+.env.*
+!.env.example
+
+# Compiled output
+build/
+dist/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Output of 'npm pack'
+*.tgz
+
+# Arquivos para desenvolvimento nosso
+
+.editorconfig
+.eslintrc.json
+.eslintrc.js
+.gitignore
+.travis.yml
+rollup.config.dev.js
+rollup.config.js
+yarn.lock
+*.sh
+
+# Tests podem ser feitos recursivamento nos node_modules, deixa aqui
+
+# *.test.js
