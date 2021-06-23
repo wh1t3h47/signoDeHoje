@@ -5,9 +5,12 @@ module.exports = {
         "es2021": true,
         "jest": true,
     },
-    "extends": ["eslint:recommended", "plugin:jest/all"], 
+    "extends": [
+        "eslint:recommended",
+        "plugin:jest/all",
+    ], 
     "parserOptions": {
-        "ecmaVersion": 12
+        "ecmaVersion": 6
     },
     "rules": {
     }

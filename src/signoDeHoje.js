@@ -1,12 +1,20 @@
-const {operacao, colecao_signos, debug} = require("./definitions");
+const {operacao,
+  colecao_signos,
+  debugDataSigno,
+  debugSignoEncontrado,
+  DataInicio} = require("./definitions");
 const Assertions = require("./assertions").default;
+
+
+// Não funciona se por em definitions.js
+/** @typedef {{ or: 0, and: 1 }} operacao */
 
 /**
  * @param {Date} data
  * @param {Date} data_inicio
  * @param {Date} data_fim
  * @param {operacao} tipo_comparacao
- * @return {Boolean} true caso a data se encaixe dentro do intervalo
+ * @return {boolean} true caso a data se encaixe dentro do intervalo
  * @throws {Error}
  **/
 
@@ -48,10 +56,10 @@ const retorna_signo = (data) => {
   let signoNome = '';
 
   signos.some((signo) => {
-    const data_inicio_signo = new Date(`${signo.DataInicio}-${ano} 00:00:00`);
-    const data_fim_signo = new Date(`${signo.DataFim}-${ano} 23:59:59`);
+    const data_inicio_signo = new Date(`${signo.DataInicio}-${ano} 00:00:00.000`);
+    const data_fim_signo = new Date(`${signo.DataFim}-${ano} 23:59:59.999`);
 
-    if (debug) {
+    if (debugDataSigno) {
       console.log('data_inicio_signo = ', data_inicio_signo,
         '\ndata_fim_signo = ', data_fim_signo,
         '\ndata_inicio_signo = ', data_inicio_signo,
@@ -60,13 +68,17 @@ const retorna_signo = (data) => {
       );
     }
 
-    const tipo_comparacao = signo.DataInicio === '12-22' ? operacao.or : operacao.and;
+    const tipo_comparacao = signo.DataInicio === DataInicio ? operacao.or : operacao.and;
 
     if (verifica_data_range(data, data_inicio_signo, data_fim_signo, tipo_comparacao)) {
+      if (debugSignoEncontrado) {
+        console.log('encontrou signo', signo.Nome)
+      }
       signoNome = signo.Nome;
       return true;
     } // else
   });
+
   return signoNome;
 };
 
