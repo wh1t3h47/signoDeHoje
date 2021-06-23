@@ -2,6 +2,7 @@ const {operacao,
   colecao_signos,
   debugDataSigno,
   debugSignoEncontrado,
+  debugSignoComparacao,
   DataInicio} = require("./definitions");
 const Assertions = require("./assertions").default;
 
@@ -23,14 +24,16 @@ const verifica_data_range = (data, data_inicio, data_fim, tipo_comparacao) => {
   // Assertions.checkInstance({ tipo_comparacao }, { operacao })
   Assertions.checkInstance({ data, data_inicio, data_fim }, Date)
 
-  // assert((tipo_comparacao instanceof operacao), "Operação precisa ser do tipo operacao, disponível em definitions.js");
-  // assert((data_inicio instanceof Date && data_fim instanceof Date), "data_inicio e data_fim precisam ser do tipo Date")
-
   if (tipo_comparacao === operacao.and) {
-    return (data >= data_inicio && data <= data_fim);
+    const pertenceAoSigno = (data >= data_inicio && data <= data_fim)
+    if (debugSignoComparacao && pertenceAoSigno) {
+      console.log(`${data} >= ${data_inicio} && ${data} <= ${data_fim}`)
+    }
+    return pertenceAoSigno;
   } // else
   if (tipo_comparacao === operacao.or) {
-    return (data >= data_inicio || data <= data_fim);
+    const pertenceAoSigno = (data >= data_inicio || data <= data_fim);
+    return pertenceAoSigno;
   } // else
   throw new Error('Comparação inválida');
 };

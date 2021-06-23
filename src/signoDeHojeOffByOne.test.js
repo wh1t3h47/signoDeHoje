@@ -18,9 +18,9 @@ const {DataInicio} = require("./definitions")
 
 testarSigno('testar primeiro dia de Aquário)', new Date('01-21-2000'), "Aquário")
 
-testarSigno('testar último dia de Aquário)', new Date('02-18-2000'), "Aquário")
+testarSigno('testar último dia de Aquário)', new Date('02-19-2000'), "Aquário")
 
-testarSigno('testar primeiro dia de Peixes)', new Date('02-19-2000'), "Peixes")
+testarSigno('testar primeiro dia de Peixes)', new Date('02-20-2000'), "Peixes")
 
 testarSigno('testar último dia de Peixes)', new Date('03-20-2000'), "Peixes")
 
@@ -34,11 +34,11 @@ testarSigno('testar último dia de Touro)', new Date('05-20-2000'), "Touro")
 
 testarSigno('testar primeiro dia de Gêmeos)', new Date('05-21-2000'), "Gêmeos")
 
-testarSigno('testar último dia de Gêmeos)', new Date('06-20-2000'), "Gêmeos")
+testarSigno('testar último dia de Gêmeos)', new Date('06-21-2000'), "Gêmeos")
 
-testarSigno('testar primeiro dia de Câncer)', new Date('06-21-2000'), "Câncer")
+testarSigno('testar primeiro dia de Câncer)', new Date('06-22-2000'), "Câncer")
 
-testarSigno('testar último dia de Câncer)', new Date('07-22-2000'), "Câncer")
+testarSigno('testar último dia de Câncer)', new Date('07-21-2000'), "Câncer")
 
 testarSigno('testar primeiro dia de Leão)', new Date('07-23-2000'), "Leão")
 
@@ -62,4 +62,4 @@ testarSigno('testar último dia de Sagitário)', new Date('12-21-2000'), "Sagit�
 
 testarSigno('testar primeiro dia de Capricórnio)', new Date(`${DataInicio}-2000`), "Capricórnio")
 
-testarSigno('testar último dia de Capricórnio)', new Date('01-20-2000'), "Capricórnio")
+testarSigno('testar último dia de Capricórnio)', new Date('01-19-2000'), "Capricórnio")

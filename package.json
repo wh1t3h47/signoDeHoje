@@ -4,6 +4,7 @@
   "main": "signoDeHoje.js",
   "repository": "https://github.com/wh1t3h47/signoDeHoje",
   "contributors": [ "Bruno Machado <brunomdr46@gmail.com>", "wh1t3h47 <tom.mharres@gmail.com>" ],
+"keywords": ["signo", "date", "data", "converte", "zodiaco", "zodíaco", "astrologia", "horóscopo", "Brasil"],
   "description": "Converte um objeto Date para um signo em Português do Brasil",
   "license": "MIT",
   "private": false,

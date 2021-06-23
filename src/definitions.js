@@ -1,33 +1,58 @@
 const DataInicio = "12-22"
 
 /** 
- * @type {Array<{ Nome: 'Aquário' | 'Peixes' | 'Áries' | 'Touro' | 'Gêmeos' | 'Câncer' | 'Leão' | 'Virgem' | 'Libra' | 'Escorpião' | 'Sagitário' | 'Capricórnio', DataInicio: '01-21' | '02-19' | '03-21' | '04-20' | '05-21' | '06-21' | '07-23' | '08-23' | '09-23' | '10-23' | '11-22' | '12-22', DataFim: '02-18' | '03-20' | '04-19' | '05-20' | '06-20' | '07-22' | '08-22' | '09-22' | '10-22' | '11-21' | '12-21' | '01-20' }> } */
+ * @type {Array<{ Nome: 'Aquário' | 'Peixes' | 'Áries' | 'Touro' | 'Gêmeos' | 'Câncer' | 'Leão' | 'Virgem' | 'Libra' | 'Escorpião' | 'Sagitário' | 'Capricórnio',  DataInicio: '01-21' | '02-20' | '03-21' | '04-20' | '05-21' | '06-22' | '07-22' | '08-23' | '09-23' | '10-23' | '11-21', DataFim: '02-19' | '03-20' | '04-19' | '05-20' | '06-21' | '07-21' | '08-22' | '09-22' | '10-22' | '11-21' | '12-21' | '01-20' }> }
+ **/
 
 const colecao_signos = [
   { Nome: 'Aquário',
-    DataInicio: '01-21', DataFim: '02-18'},
+    DataInicio: '01-21', DataFim: '02-19',
+  },
+
   { Nome: 'Peixes',
-    DataInicio: '02-19', DataFim: '03-20'},
+    DataInicio: '02-20', DataFim: '03-20',
+  },
+
   { Nome: 'Áries',
-    DataInicio: '03-21', DataFim: '04-19'},
+    DataInicio: '03-21', DataFim: '04-19',
+  },
+
   { Nome: 'Touro',
-    DataInicio: '04-20', DataFim: '05-20'},
+    DataInicio: '04-20', DataFim: '05-20',
+  },
+
   { Nome: 'Gêmeos',
-    DataInicio: '05-21', DataFim: '06-20'},
+    DataInicio: '05-21', DataFim: '06-21',
+  },
+
   { Nome: 'Câncer',
-    DataInicio: '06-21', DataFim: '07-22'},
+    DataInicio: '06-22', DataFim: '07-21',
+  },
+
+
   { Nome: 'Leão',
-    DataInicio: '07-23', DataFim: '08-22'},
+    DataInicio: '07-22', DataFim: '08-22',
+  },
+
   { Nome: 'Virgem',
-    DataInicio: '08-23', DataFim: '09-22'},
+    DataInicio: '08-23', DataFim: '09-22',
+  },
+
   { Nome: 'Libra',
-    DataInicio: '09-23', DataFim: '10-22'},
+    DataInicio: '09-23', DataFim: '10-22',
+  },
+
   { Nome: 'Escorpião',
-    DataInicio: '10-23', DataFim: '11-21'},
+    DataInicio: '10-23', DataFim: '11-21',
+  },
+
   { Nome: 'Sagitário',
-    DataInicio: '11-22', DataFim: '12-21'},
+    DataInicio: '11-21', DataFim: '12-21',
+  },
+
   { Nome: 'Capricórnio',
-    DataInicio, DataFim: '01-20'},
+    DataInicio, DataFim: '01-20',
+  },
 ];
 
 /** enum */
@@ -41,6 +66,8 @@ const operacao = { and, or };
 const debugDataSigno = false;
 /** Caso seja true, printa uma informação mais verbal, útil para debugging */
 const debugSignoEncontrado = false;
+/** Caso seja true, printa uma informação mais verbal, útil para debugging */
+const debugSignoComparacao = false;
   
 module.exports = {
   DataInicio,
@@ -48,4 +75,5 @@ module.exports = {
   operacao,
   debugDataSigno,
   debugSignoEncontrado,
+  debugSignoComparacao,
 }
