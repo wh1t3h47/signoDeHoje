@@ -1,5 +1,6 @@
 /** 
- * @type {Array<{Nome:'Aquário'|'Peixes'|'Áries'|'Touro'|'Gêmeos'|'Câncer'|'Leão'|'Virgem'|'Libra'|'Escorpião'|'Sagitário'|'Capricórnio', DataInicio: '01-20'|'02-19'|'03-21'|'04-20'|'05-21'|'06-21'|'07-23'|'08-23'|'09-23'|'10-23'|'11-22'|'12-22',DataFim: '02-18'|'03-20'|'04-19'|'05-20'|'06-20'|'07-22'|'08-22'|'09-22'|'10-22'|'11-21'|'12-21'|'01-19'}>} */
+ * @type {Array<{Nome:'Aquário'|'Peixes'|'Áries'|'Touro'|'Gêmeos'|'Câncer'|'Leão'|'Virgem'|'Libra'|'Escorpião'|'Sagitário'|'Capricórnio', DataInicio: `01-20-${yearNow}`|'02-19'|'03-21'|'04-20'|'05-21'|'06-21'|'07-23'|'08-23'|'09-23'|'10-23'|'11-22'|'12-22',DataFim: '02-18'|'03-20'|'04-19'|'05-20'|'06-20'|'07-22'|'08-22'|'09-22'|'10-22'|'11-21'|'12-21'|'01-19'}>} */
+
 const colecao_signos = [
   { Nome: 'Aquário',
     DataInicio: '01-20', DataFim: '02-18'},
@@ -33,5 +34,8 @@ const or = 0;
 const and = 1;
 /** @type {Record<'and' | 'or', number>} */
 const operacao = { and, or };
+
+/** Caso seja true, printa uma informação mais verbal, útil para debugging */
+const debug = true;
   
-module.exports = { colecao_signos, operacao }
+module.exports = { colecao_signos, operacao, debug }
