@@ -5,7 +5,7 @@
   "main": "signoDeHoje.js",
   "repository": "https://github.com/wh1t3h47/signoDeHoje",
   "author": "wh1t3h47 <tom.mharres@gmail.com>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "private": false,
   "devDependencies": {
     "@types/jest": "^26.0.23",
