@@ -39,4 +39,4 @@ testarSigno('testar moeda libra', new Date('10-22-2005'), "Libra")
 
 testarSigno('testar pessoa Capricornoano', new Date('01-20-2005'), "Capricórnio")
 
-testarSigno('testar pessoa sagiotário', new Date('12-18-2005'), "Sagitário")
+testarSigno('testar pessoa sagiotário (desculpa a piada, achei que ninguém fosse rodar os testes)', new Date('12-18-2005'), "Sagitário")
