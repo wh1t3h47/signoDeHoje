@@ -20,6 +20,7 @@
 ## Planos
 - [ ] Publicar até o final de Agosto
 
+![GitHub Contributors Image](https://contrib.rocks/image?repo=wh1t3h47/signoDeHoje)
 
 >  | <span> <h2 align="center" text-align="right"> Feito por </h2> </span> |
 >  | - |
